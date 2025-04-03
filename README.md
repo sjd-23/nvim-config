@@ -12,7 +12,7 @@
 ## Notes
 
 - Initial working directories are:
-  - **Windows:** `C:/Projects` (fallbacks to `C:/` if missing)
+  - **Windows:** `C:/Projects` (`C:/` if DNE)
   - **Unix:** `~`
 - Designed in mind with:
   - [JetBrains Mono Nerd Font](https://www.nerdfonts.com/font-downloads)
