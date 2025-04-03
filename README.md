@@ -1,3 +1,14 @@
+<p align="center">
+  <pre>
+   _   _                 _     
+  | \ | |               (_)    
+  |  \| | _____   _____  _ ___ 
+  | . ` |/ _ \ \ / / _ \| / __|
+  | |\  |  __/\ V / (_) | \__ \
+  |_| \_|\___| \_/ \___/|_|___/
+  </pre>
+</p>
+
 ## 🔌 Plugins
 
 Installed with [lazy.nvim](https://github.com/folke/lazy.nvim):
