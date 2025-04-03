@@ -19,7 +19,7 @@
   - [WezTerm](https://wezterm.org/installation.html)
 
 ## Setup
-### Windows:
-`git clone https://github.com/sjd23dev/nvim-config %LOCALAPPDATA%\nvim`
-### Linux / macOS:
-`git clone https://github.com/sjd23dev/nvim-config ~/.config/nvim`
+- Windows:
+  - `git clone https://github.com/sjd23dev/nvim-config %LOCALAPPDATA%\nvim`
+- Linux/macOS:
+  - `git clone https://github.com/sjd23dev/nvim-config ~/.config/nvim`
