@@ -28,9 +28,9 @@ Installed with [lazy.nvim](https://github.com/folke/lazy.nvim):
 
 ## ⚙️ Setup
 ### Windows
-git clone https://github.com/sjd23dev/nvim-config %LOCALAPPDATA%\nvim
+'git clone https://github.com/sjd23dev/nvim-config %LOCALAPPDATA%\nvim'
 ### Linux / macOS
-git clone https://github.com/sjd23dev/nvim-config ~/.config/nvim
+'git clone https://github.com/sjd23dev/nvim-config ~/.config/nvim'
 
 ## 🧠 Notes
 
