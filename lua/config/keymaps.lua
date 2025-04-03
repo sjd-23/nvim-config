@@ -1,3 +1,4 @@
+-- Oil, open and close (Space + e)
 vim.keymap.set("n", "<leader>e", function()
   local oil = require("oil")
   if oil.get_current_dir() then
@@ -26,3 +27,39 @@ vim.keymap.set("n", "<leader>e", function()
     end
   end
 end, { desc = "Toggle Oil" })
+
+vim.keymap.set("n", "<leader>ls", function()
+  local cwd = vim.fn.getcwd()
+  local os = vim.loop.os_uname().sysname
+
+  if os == "Windows_NT" then
+    vim.fn.jobstart({
+      "cmd.exe",
+      "/k",
+      "cd /d " .. cwd .. " && live-server"
+    }, { detach = true })
+
+  elseif os == "Darwin" then
+    vim.fn.jobstart({
+      "osascript",
+      "-e",
+      string.format(
+        [[tell app "Terminal" to do script "cd '%s' && live-server"]],
+        cwd
+      )
+    }, { detach = true })
+
+  else
+    local terminal = vim.fn.executable("x-terminal-emulator") == 1
+        and "x-terminal-emulator"
+        or "gnome-terminal"
+    vim.fn.jobstart({
+      terminal,
+      "--",
+      "bash",
+      "-c",
+      "cd '" .. cwd .. "' && live-server"
+    }, { detach = true })
+  end
+end, { desc = "Launch live-server" })
+
