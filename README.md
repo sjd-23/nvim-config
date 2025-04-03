@@ -1,5 +1,3 @@
-# Neovim Config
-
 ## 🔌 Plugins
 
 Installed with [lazy.nvim](https://github.com/folke/lazy.nvim):
@@ -28,12 +26,12 @@ Installed with [lazy.nvim](https://github.com/folke/lazy.nvim):
 
 ## ⚙️ Setup
 ### Windows
-'git clone https://github.com/sjd23dev/nvim-config %LOCALAPPDATA%\nvim'
+`git clone https://github.com/sjd23dev/nvim-config %LOCALAPPDATA%\nvim`
 ### Linux / macOS
-'git clone https://github.com/sjd23dev/nvim-config ~/.config/nvim'
+`git clone https://github.com/sjd23dev/nvim-config ~/.config/nvim`
 
 ## 🧠 Notes
 
 - Automatically sets working directory:
-  - **Windows:** 'C:/Projects' (fallsback to 'C:/' if missing)
-  - **Unix:** '~'
+  - **Windows:** `C:/Projects` (fallsback to `C:/` if missing)
+  - **Unix:** `~`
