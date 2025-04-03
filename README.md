@@ -17,9 +17,10 @@
 - Designed in mind with:
   - [JetBrains Mono Nerd Font](https://www.nerdfonts.com/font-downloads)
   - [WezTerm](https://wezterm.org/installation.html)
+- SSH key required for cloning.
 
 ## Setup
 - Windows:
-  - `git clone https://github.com/sjd23dev/nvim-config %LOCALAPPDATA%\nvim`
+  - `git clone git@github.com:sjd23dev/nvim-config.git %LOCALAPPDATA%\nvim`
 - Linux/macOS:
-  - `git clone https://github.com/sjd23dev/nvim-config ~/.config/nvim`
+  - `git clone git@github.com:sjd23dev/nvim-config.git ~/.config/nvim` 
