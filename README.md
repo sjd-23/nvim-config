@@ -25,13 +25,13 @@ Installed with [lazy.nvim](https://github.com/folke/lazy.nvim):
 - **Java**
 
 ## ⚙️ Setup
-### Windows
+### Windows:
 `git clone https://github.com/sjd23dev/nvim-config %LOCALAPPDATA%\nvim`
-### Linux / macOS
+### Linux / macOS:
 `git clone https://github.com/sjd23dev/nvim-config ~/.config/nvim`
 
 ## 🧠 Notes
 
-- Automatically sets working directory:
-  - **Windows:** `C:/Projects` (fallsback to `C:/` if missing)
+- Initial working directory is:
+  - **Windows:** `C:/Projects` (fallbacks to `C:/` if missing)
   - **Unix:** `~`
