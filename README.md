@@ -35,3 +35,4 @@ Installed with [lazy.nvim](https://github.com/folke/lazy.nvim):
 - Initial working directory is:
   - **Windows:** `C:/Projects` (fallbacks to `C:/` if missing)
   - **Unix:** `~`
+- Designed in mind with [JetBrains Mono Nerd Font](https://www.nerdfonts.com/font-downloads)
