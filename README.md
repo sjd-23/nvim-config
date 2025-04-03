@@ -11,7 +11,7 @@
 
 ## Notes
 
-- Initial working directory is:
+- Initial working directories are:
   - **Windows:** `C:/Projects` (fallbacks to `C:/` if missing)
   - **Unix:** `~`
 - Designed in mind with:
