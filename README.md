@@ -18,6 +18,11 @@
   - [JetBrains Mono Nerd Font](https://www.nerdfonts.com/font-downloads)
   - [WezTerm](https://wezterm.org/installation.html)
 - SSH key required for cloning.
+- Required stuff:
+  - [Python](https://www.python.org/)
+  - [Node.js](https://nodejs.org/en)
+  - [C/C++](https://www.mingw-w64.org/)
+  - [JDK](https://www.oracle.com/java/technologies/downloads/)
 
 ## Setup
 - Windows:
