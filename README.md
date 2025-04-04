@@ -23,6 +23,8 @@
   - [Node.js](https://nodejs.org/en)
   - [C/C++](https://www.mingw-w64.org/)
   - [JDK](https://www.oracle.com/java/technologies/downloads/)
+- Optional stuff:
+  - Live Server `npm install -g live-server`
 
 ## Setup
 - Windows:
