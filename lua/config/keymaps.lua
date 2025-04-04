@@ -1,4 +1,4 @@
--- Oil, open and close (Space + e)
+-- Oil, open and close: <leader> e
 vim.keymap.set("n", "<leader>e", function()
   local oil = require("oil")
   if oil.get_current_dir() then
@@ -28,11 +28,15 @@ vim.keymap.set("n", "<leader>e", function()
   end
 end, { desc = "Toggle Oil" })
 
+-- Launch a Live Server: <leader> ls
 vim.keymap.set("n", "<leader>ls", function()
   local cwd = vim.fn.getcwd()
   
   if vim.fn.executable("live-server") ~= 1 then
-    vim.notify("Live Server: live-server is not installed or not in PATH. Please install it via npm.", vim.log.levels.WARN)
+    vim.api.nvim_echo({
+      { "Live Server: ", "ErrorMsg" },
+      { "Not found! Install it via npm.", "WarningMsg" }
+    }, true, {})
     return
   end
   
@@ -47,11 +51,34 @@ vim.keymap.set("n", "<leader>ls", function()
     cmd = {"osascript", "-e", string.format([[tell app "Terminal" to do script "cd '%s' && live-server"]], cwd)}
   elseif is_wsl then
     cmd = {"wt.exe", "bash", "-c", "cd \"$(pwd)\" && live-server"}
-    
   else
     local terminal = vim.fn.executable("x-terminal-emulator") == 1 and "x-terminal-emulator" or "gnome-terminal"
     cmd = {terminal, "--", "bash", "-c", "cd '" .. cwd .. "' && live-server"}
   end
   
   vim.fn.jobstart(cmd, {detach = true})
-end, {desc = "Launch live-server"})
+end, {desc = "Launch Live Server"})
+
+-- Launch Intellij: <leader> ij
+vim.keymap.set("n", "<leader>ij", function()
+  if vim.fn.executable("idea") == 1 then
+    vim.fn.jobstart({ "idea", "." }, { detach = true })
+  else
+    vim.api.nvim_echo({
+      { "IntelliJ: ", "ErrorMsg" },
+      { "Not found!", "WarningMsg" }
+    }, true, {})
+  end
+end, { desc = "Open IntelliJ" })
+
+-- Launch VS Code: <leader> vc
+vim.keymap.set("n", "<leader>vc", function()
+  if vim.fn.executable("code") == 1 then
+    vim.fn.jobstart({ "code", "." }, { detach = true })
+  else
+    vim.api.nvim_echo({
+      { "VS Code: ", "ErrorMsg" },
+      { "Not found! Install or add 'code' to PATH.", "WarningMsg" }
+    }, true, {})
+  end
+end, { desc = "Open VS Code" })
