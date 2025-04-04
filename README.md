@@ -17,8 +17,8 @@
   - [JDK](https://www.oracle.com/java/technologies/downloads/)
 - Optional:
   - Live Server `npm install -g live-server`
-  - [Intellij](https://www.jetbrains.com/idea/)
-  - [VS Code](https://code.visualstudio.com/)
+  - [Intellij](https://www.jetbrains.com/idea/): Launch via keybind `<leader> ij`
+  - [VS Code](https://code.visualstudio.com/): Launch via keybind `<leader vc`
 
 ## Notes
 
