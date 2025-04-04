@@ -22,7 +22,7 @@
 
 - Initial working directories are:
   - **Windows:** `C:/Projects` (`C:/` as a fallback)
-  - **Unix:** `~`
+  - **Unix:** `~/`
 - Designed in mind with:
   - [JetBrains Mono Nerd Font](https://www.nerdfonts.com/font-downloads)
   - [WezTerm](https://wezterm.org/installation.html)
