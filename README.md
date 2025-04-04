@@ -28,7 +28,6 @@
 - Designed in mind with:
   - [JetBrains Mono Nerd Font](https://www.nerdfonts.com/font-downloads)
   - [WezTerm](https://wezterm.org/installation.html)
-- SSH key required for cloning.
 
 ## Setup
 - Windows:
