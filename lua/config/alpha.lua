@@ -8,7 +8,7 @@ local splashes = {
   "Strike the earth!",
 }
 
-math.randomseed(os.time())
+math.randomseed(os.time() + vim.loop.hrtime())
 local random_footer = splashes[math.random(1, #splashes)]
 
 dashboard.section.header.val = {
