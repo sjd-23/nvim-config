@@ -25,3 +25,10 @@ telescope.setup({
 
 telescope.load_extension("file_browser")
 telescope.load_extension("project")
+
+local original_set_lines = vim.api.nvim_buf_set_lines
+vim.api.nvim_buf_set_lines = function(bufnr, ...)
+  if vim.api.nvim_buf_is_valid(bufnr) then
+    return pcall(original_set_lines, bufnr, ...)
+  end
+end
