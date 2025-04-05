@@ -3,6 +3,9 @@ local dashboard = require("alpha.themes.dashboard")
 
 local splashes = {
   "Where are we now?",
+  "Help the poor children in Uganda!",
+  "Redstone powered!",
+  "Strike the earth!",
 }
 
 math.randomseed(os.time())
@@ -18,9 +21,10 @@ dashboard.section.header.val = {
 }
 
 local buttons = {
-  dashboard.button("f", "  Find file", ":Telescope find_files<CR>"),
-  dashboard.button("n", "  New file", ":ene <BAR> startinsert <CR>"),
-  dashboard.button("r", "  Recent", ":Telescope oldfiles<CR>"),
+  dashboard.button("p", "  Browse projects", ":Telescope projects<CR>"),
+  dashboard.button("f", "  Browse files", ":Telescope find_files<CR>"),
+  dashboard.button("g", "  Browse folders", ":Telescope file_browser<CR>"),
+  dashboard.button("r", "  Browse recent", ":Telescope oldfiles<CR>"),
   dashboard.button("q", "  Quit", ":qa<CR>"),
 }
 
@@ -47,5 +51,22 @@ end
 
 vim.api.nvim_create_autocmd("User", {
   pattern = "AlphaReady",
-  callback = set_home_directory,
+  callback = function()
+    set_home_directory()
+
+    local mf = require("mini.files")
+    mf.refresh()
+  end,
+})
+
+vim.api.nvim_create_autocmd("BufEnter", {
+  callback = function()
+    local buf_ft = vim.bo.filetype
+    if buf_ft == "alpha" then
+      set_home_directory()
+
+      local mf = require("mini.files")
+      mf.refresh()
+    end
+  end,
 })

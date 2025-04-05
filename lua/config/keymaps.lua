@@ -1,32 +1,8 @@
--- Oil, open and close: <leader> e
+-- Open mini.files <leader> e
 vim.keymap.set("n", "<leader>e", function()
-  local oil = require("oil")
-  if oil.get_current_dir() then
-    local ok, err = pcall(function()
-      vim.cmd("b#")
-    end)
-    if not ok then
-      vim.api.nvim_echo({
-        {"Oil: ", "WarningMsg"},
-        {"No previous buffer to return to. Try opening a file first."}
-      }, false, {})
-    end
-  else
-    local current_path = vim.fn.fnamemodify(vim.fn.expand("%:p:h"), ":p"):gsub("\\", "/")
-    if vim.fn.isdirectory(current_path) == 1 then
-      vim.cmd("cd " .. current_path)
-    end
-    local ok, err = pcall(function()
-      vim.cmd("Oil .")
-    end)
-    if not ok then
-      vim.api.nvim_echo({
-        {"Oil: ", "WarningMsg"},
-        {"Could not open file explorer. Has a file been opened yet?"}
-      }, false, {})
-    end
-  end
-end, { desc = "Toggle Oil" })
+  require("mini.files").open(vim.loop.cwd(), false)
+  require("mini.files").refresh()
+end, { desc = "Open mini.files at CWD" })
 
 -- Launch a Live Server: <leader> ls
 vim.keymap.set("n", "<leader>ls", function()
@@ -35,7 +11,7 @@ vim.keymap.set("n", "<leader>ls", function()
   if vim.fn.executable("live-server") ~= 1 then
     vim.api.nvim_echo({
       { "Live Server: ", "ErrorMsg" },
-      { "Not found! Install it via npm.", "WarningMsg" }
+      { "Not found!", "WarningMsg" }
     }, true, {})
     return
   end
@@ -78,7 +54,7 @@ vim.keymap.set("n", "<leader>vc", function()
   else
     vim.api.nvim_echo({
       { "VS Code: ", "ErrorMsg" },
-      { "Not found! Install or add 'code' to PATH.", "WarningMsg" }
+      { "Not found!", "WarningMsg" }
     }, true, {})
   end
 end, { desc = "Open VS Code" })
