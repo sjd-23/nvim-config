@@ -17,6 +17,8 @@
   - [JDK](https://www.oracle.com/java/technologies/downloads/)
 - Optional:
   - Live Server `npm install -g live-server`
+  - [Intellij](https://www.jetbrains.com/idea/): Launch via keybind `<leader> ij`
+  - [VS Code](https://code.visualstudio.com/): Launch via keybind `<leader vc`
 
 ## Notes
 
@@ -26,7 +28,6 @@
 - Designed in mind with:
   - [JetBrains Mono Nerd Font](https://www.nerdfonts.com/font-downloads)
   - [WezTerm](https://wezterm.org/installation.html)
-- SSH key required for cloning.
 
 ## Setup
 - Windows:
