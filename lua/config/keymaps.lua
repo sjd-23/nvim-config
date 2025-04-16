@@ -1,4 +1,8 @@
--- Open mini.files <leader> e
+vim.keymap.set('n', '<leader>w', '<cmd>w<CR>', { desc = "Write file" }) -- Save file: <leader> w
+vim.keymap.set('n', '<leader>W', '<cmd>wa<CR>', { desc = "Write all buffers" }) -- Save all files in active buffer: <leader> W
+vim.keymap.set('n', '<leader>v', ':vsplit | edit ', { desc = "Edit file in vertical split" }) -- Open file in vertical split: <leader> v
+
+-- Open mini.files: <leader> e
 vim.keymap.set("n", "<leader>e", function()
   require("mini.files").open(vim.loop.cwd(), false)
   require("mini.files").refresh()
