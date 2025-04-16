@@ -12,6 +12,7 @@ vim.opt.scrolloff = 8
 vim.opt.sidescrolloff = 8
 vim.opt.cmdheight = 1
 vim.opt.showmode = false
+vim.opt.colorcolumn = "80"
 
 vim.opt.mouse = ""
 vim.opt.clipboard = "unnamedplus"
