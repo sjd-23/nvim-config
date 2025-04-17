@@ -31,6 +31,6 @@
 
 ## Setup
 - Windows:
-  - `git clone git@github.com:sjd23dev/nvim-config.git %LOCALAPPDATA%\nvim`
+  - `git clone git@github.com:sjd-23/nvim-config.git %LOCALAPPDATA%\nvim`
 - Unix:
-  - `git clone git@github.com:sjd23dev/nvim-config.git ~/.config/nvim`
+  - `git clone git@github.com:sjd-23/nvim-config.git ~/.config/nvim`
