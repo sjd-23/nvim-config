@@ -18,7 +18,7 @@
 - Optional:
   - Live Server `npm install -g live-server`
   - [Intellij](https://www.jetbrains.com/idea/): Launch via keybind `<leader> ij`
-  - [VS Code](https://code.visualstudio.com/): Launch via keybind `<leader vc`
+  - [VS Code](https://code.visualstudio.com/): Launch via keybind `<leader> vc`
 
 ## Notes
 
